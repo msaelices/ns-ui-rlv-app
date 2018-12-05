@@ -4,16 +4,34 @@
 
 ## Setup
 
+* Install ngrok from https://ngrok.com/download
+
+* Install node dependencies
+
 ``` bash
-# Install dependencies
 npm install
+```
 
-# Install json-server globally
+* Install `json-server` globally
+
+``` bash
 npm install -g json-server
+```
 
-# Start the REST service
+* Start the REST service (will listen on 3000 port)
+
+``` bash
 json-server --watch db.json
 ```
+
+* Start ngrok in a new terminal
+
+``` bash
+ngrok http 3000
+```
+
+* Open the `app/constants.js` file and change `YOURHASH` with your ngrok hash
+
 
 ## Usage
 
